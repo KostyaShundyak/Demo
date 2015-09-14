@@ -1,0 +1,15 @@
+Package: STDemo
+Type: Package
+Title: Demonstrates ST workflow
+Version: 1.0
+Date: 2015-09-10
+Author: K. Shundyak
+Maintainer: K. Shundyak <kostya.shundyak@yahoo.com>
+Description: ST Demo package demonstrate development and execution workflow for 
+            the standard stress testing PD model.
+Encoding: UTF-8
+Depends:
+    R (>= 3.0.1),
+Suggests:
+    testthat
+License: GPL
