@@ -20,7 +20,7 @@
 #'        UsingCodes=Y&VPD=Y&VFD=N
 #' @export
 #'
-#' @examples make.url.BOE("RPQTFHD","31/Mar/1993","06/Aug/2015")
+#' @examples make.url.BOE("RPQTFHD",as.Date("31/Mar/1993"),as.Date("06/Aug/2015"))
 make.url.BOE <- function(SeriesCodes,Datefrom,Dateto,CSVF="TN",UsingCodes="Y",VPD="Y",VFD="N"){
   if( missing(SeriesCodes) ){
     stop("SeriesCodes argument is missing")  
@@ -47,10 +47,10 @@ make.url.BOE <- function(SeriesCodes,Datefrom,Dateto,CSVF="TN",UsingCodes="Y",VP
     urlStr <- "http://www.bankofengland.co.uk/boeapps/iadb/fromshowcolumns.asp?csv.x=yes"
   
     #string specifying the starting date for analysis
-    DatefromStr <- paste("Datefrom",Datefrom,sep="=")
+    DatefromStr <- paste("Datefrom",format(Datefrom,"%d/%b/%Y"),sep="=")
     
     #string specifying the end date for analysis
-    DatetoStr <- paste("Dateto",Dateto,sep="=")
+    DatetoStr <- paste("Dateto",format(Dateto,"%d/%b/%Y"),sep="=")
     
     #string specifying codes of timeseries on BoE website
     SeriesCodesStr <- paste("SeriesCodes",SeriesCodes,sep="=")
