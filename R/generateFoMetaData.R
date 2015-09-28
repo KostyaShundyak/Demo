@@ -8,5 +8,6 @@
 #'
 #' @examples generateFoMetaData()
 generateFoMetaData <- function(){
-  return(data.frame(SeriesName = c("RPQTFHD","RPQB7YW"), DateFrom = c("31/Mar/1993","31/Mar/1993")))
+  return(data.frame(SeriesName = c("RPQTFHD","RPQB7YW"), DateFrom = c("31/Mar/1993","31/Mar/1993"),
+                    stringsAsFactors = FALSE))
 }
