@@ -36,6 +36,6 @@ A string representing URL of the corresponding data on Bank of England's website
 Generates an URL for accessing Bank of England's data, and returns it as a string
 }
 \examples{
-make.url.BOE("RPQTFHD","31/Mar/1993","06/Aug/2015")
+make.url.BOE("RPQTFHD",as.Date("31/Mar/1993"),as.Date("06/Aug/2015"))
 }
 
